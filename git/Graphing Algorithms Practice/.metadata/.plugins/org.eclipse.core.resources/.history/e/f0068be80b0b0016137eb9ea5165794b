@@ -1,0 +1,6 @@
+package undirected_graph;
+
+public class VerticeNotFoundException extends Exception{
+	
+
+}

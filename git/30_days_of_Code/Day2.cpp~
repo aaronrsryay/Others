@@ -1,0 +1,18 @@
+#include <iostream>
+#include <algorithm>
+
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    float cost;
+    int tip;
+    int tax;
+    float actual=0;
+    std::cin>>cost;
+    std::cin>>tip;
+    std::cin>>tax;
+    actual=cost+((cost*(tip+tax))/100);
+    std::cout<<"The final price of the meal is $"+(std::to_string((int)round(actual)))+"."<<std::endl;
+    return 0;
+}
+

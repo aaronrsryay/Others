@@ -1,0 +1,35 @@
+package undirected_graph;
+
+
+import java.util.*;
+
+
+public class Vertex{
+    private ArrayList<Edge> Edges;
+    private int ID;
+    
+    public Vertex(int number){
+        this.ID=number;
+        Edges=new ArrayList<Edge>();
+    }
+    public void addEdge(Edge e){
+    	Edges.add(e);
+    }
+    public int giveID(){
+    	return ID;
+    }
+    public int get_traversal_cost(int nodeto){
+    	for(int i =0; i<Edges.size();i++){
+    		if(Edges.get(i).get_Vertex()==nodeto){
+    			
+    		}
+    	}
+    	throw Exception;
+    }
+}
+
+
+
+
+
+

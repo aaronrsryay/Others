@@ -1,0 +1,30 @@
+package undirected_graph;
+
+import java.util.ArrayList;
+
+public class Graph{
+	ArrayList<Vertex> Vertices;
+    public Graph(int nodes){
+        Vertices=new ArrayList<Vertex>();
+        for(int i=0;i<nodes;i++){
+        	Vertex toput = new Vertex(i+1);
+        	Vertices.add(toput);
+        }
+    }
+    public void add_edge(int nodenum, int nodeto, int cost){
+    	Edge toadd= new Edge(nodeto,cost);
+    	Vertex to_change=Vertices.get(nodenum-1);
+    	try{    		
+			if(to_change.get_traversal_cost(nodeto)>cost){
+			 to_change.get_edge(nodeto).change_cost(cost);	
+			}
+    	}
+    	catch (VerticeNotFoundException e) {
+			to_change.addEdge(toadd);
+		}
+    }
+    
+    public int get_shortest_path_value(int start, int end){
+    	return 0;
+    }
+}
